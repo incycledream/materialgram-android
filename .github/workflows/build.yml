@@ -11,10 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Clean up
+        run: |
+          rm -rfv /home/gradle /home/source
+
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 51200
+          root-reserve-mb: 131072
           swap-size-mb: 4096
           remove-dotnet: 'true'
 
