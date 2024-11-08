@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 51200
+          swap-size: 4096
+          remove-dotnet: 'true'
+
       - name: Checkout code
         uses: actions/checkout@v3
 
