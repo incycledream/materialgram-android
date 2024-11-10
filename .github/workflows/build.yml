@@ -26,6 +26,7 @@ jobs:
           
           echo "Disk space after cleanup"
           df -h
+          du -h /
 
       - name: Checkout code
         uses: actions/checkout@v3
