@@ -2,8 +2,8 @@ name: Build the application
 
 on:
   push:
+    branches: master
   workflow_dispatch:
-    branches: [master]
   pull_request:
 
 jobs:
